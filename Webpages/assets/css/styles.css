@@ -1,0 +1,59 @@
+
+/* nav bar */
+.ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding-block: 27px;
+    margin-right: 20px;
+  }
+
+.logo{
+    font-size: 24px;
+    border-style: solid;
+    padding: 7px;
+}
+
+.rabbit{
+    height: 18px;
+}
+
+.sign-btn{
+    background-color: #333333;
+    color: white;
+    border-color: #333333;
+}
+
+.border{
+    border-color: black;
+}
+
+
+/* under nav section */
+.infoSection{
+    display: flex;
+    margin-block: 63px;
+}
+
+.glass{
+    height: 200px;
+}
+
+.bigRabbit{
+    height: 200px;
+}
+
+.mainText{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.infoText{
+    color: #606060;
+    font-size: 20px;
+}
+
+.text{
+    text-align:center
+}
