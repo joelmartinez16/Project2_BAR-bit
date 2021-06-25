@@ -12,7 +12,7 @@ type="text/javascript"></script> */}
         center: {lat: 32.7157, lng: -117.1611},
         zoom:15
     } 
-    map = new google.maps.Map(document.getElementById('map');
+    map = new google.maps.Map(document.getElementById('map'),
     
     const marker = new google.maps.Marker({
       position: {lat: 32.7157, lng: -117.1611},

@@ -1,0 +1,28 @@
+
+// Create table if not exists bars(  
+//     id int auto_increment not null , 
+//     bars_name varchar(40), 
+//     rating int not null , 
+//     pricing enum('10','20', '30', '40', '50'),
+//     hours varchar(40),
+//     reservations varchar (40),
+//     review varchar(40),
+//     primary key(id) 
+//     );
+
+const Sequelize = require("sequelize");
+const {Model, DataTypes} = Sequelize;
+
+class Bar extends Model {
+
+}
+
+Bar.init(
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        }
+}
+)
