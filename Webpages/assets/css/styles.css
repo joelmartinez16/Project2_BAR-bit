@@ -57,3 +57,19 @@
 .text{
     text-align:center
 }
+
+
+
+
+/* day html*/
+.dayCards{
+    padding: 40px;
+}
+
+.card{
+   margin-block: 40px;
+}
+
+.row {
+    --bs-gutter-x: -8.5rem;
+}
