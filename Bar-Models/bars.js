@@ -53,6 +53,12 @@ Bar.init(
             type: DataTypes.STRING, 
             allowNull: false,
         },  
+        
+        day_of_week:{ 
+            type: DataTypes.STRING, 
+            allowNull: false,
+
+        },
     
         
     }, 
@@ -64,5 +70,7 @@ Bar.init(
 
       }
 
-);
+); 
+
+module.exports = Bar;
 
