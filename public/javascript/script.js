@@ -28,7 +28,7 @@ type="text/javascript"></script> */}
   });
        }
 
-   
+   //need to do an api call to get bar locations based on day of week
 
        addMarker({location:{lat:32.7241, lng:-117.1886}});
        addMarker({location:{lat:32.7439, lng:-117.2189}});
@@ -42,18 +42,7 @@ type="text/javascript"></script> */}
   
   
   
-   // const marker = new google.maps.Marker({
-  //   position: {lat: 32.7157, lng: -117.1611},
-  //   map: map
-  // });
-
-   //  const info = new google.maps.InfoWindow({
-    //    content: <h2>Bar name goes here</h2> 
-    //  })
-
-    // marker.addListener("onClick", () => {
-    //   info.open(map, marker)
-    // })
+ 
   
 
 
