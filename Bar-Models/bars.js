@@ -13,6 +13,7 @@ const Sequelize = require("sequelize");
 const { Model, DataTypes } = Sequelize;
 const sequelize = require("../Configuration/connection")
 
+
 class Bar extends Model {
 
 }

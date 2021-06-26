@@ -1,3 +1,5 @@
+
+const sequelize = require("./Configuration/connection")
 const { Bar } = require('../Bar-Models');
 
 const BarData = [  
@@ -18,7 +20,7 @@ const BarData = [
          pricing:"$$", 
          hours:" Mon- Sun: 9:00 AM- 3:00 PM;", 
          reservation:"No reservations, first come first served",
-         review:"European Brasserie with an all-day, counter-service menu ranges from savory  waffle sandwiches, burger, chicken and waffles, and a waffle riff on avocado toast to waffles topped with ice cream, fruits, and sweet sauces.", 
+         review:"European Brasserie with an all-day, counter-service menu ranging from savory  waffle sandwiches, burger, chicken and waffles, and a waffle riff on avocado toast to waffles topped with ice cream, fruits, and sweet sauces.", 
          day_of_week:"Moody Monday",
 
      }, 
@@ -243,105 +245,116 @@ const BarData = [
         day_of_week:"Feel good Friday ( Happy Hours)",
      },  
 
-     {
-        bars_name:"",
-        rating:"",
-        pricing:"", 
-        hours:"", 
-        reservation:"",
-        review:""
-     },  
-     {
-        bars_name:"",
-        rating:"",
-        pricing:"", 
-        hours:"", 
-        reservation:"",
-        review:""
-     }, 
+   //   {
+   //      bars_name:"",
+   //      rating:"",
+   //      pricing:"", 
+   //      hours:"", 
+   //      reservation:"",
+   //      review:""
+   //   },  
+   //   {
+   //      bars_name:"",
+   //      rating:"",
+   //      pricing:"", 
+   //      hours:"", 
+   //      reservation:"",
+   //      review:""
+   //   }, 
      
-     {
-        bars_name:"",
-        rating:"",
-        pricing:"", 
-        hours:"", 
-        reservation:"",
-        review:""
-     },  
+   //   {
+   //      bars_name:"",
+   //      rating:"",
+   //      pricing:"", 
+   //      hours:"", 
+   //      reservation:"",
+   //      review:""
+   //   },  
 
-     {
-        bars_name:"",
-        rating:"",
-        pricing:"", 
-        hours:"", 
-        reservation:"",
-        review:""
-     },  
+   //   {
+   //      bars_name:"",
+   //      rating:"",
+   //      pricing:"", 
+   //      hours:"", 
+   //      reservation:"",
+   //      review:""
+   //   },  
 
-     {
-        bars_name:"",
-        rating:"",
-        pricing:"", 
-        hours:"", 
-        reservation:"",
-        review:""
-     },  
+   //   {
+   //      bars_name:"",
+   //      rating:"",
+   //      pricing:"", 
+   //      hours:"", 
+   //      reservation:"",
+   //      review:""
+   //   },  
 
-     {
-        bars_name:"",
-        rating:"",
-        pricing:"", 
-        hours:"", 
-        reservation:"",
-        review:""
-     },  
+   //   {
+   //      bars_name:"",
+   //      rating:"",
+   //      pricing:"", 
+   //      hours:"", 
+   //      reservation:"",
+   //      review:""
+   //   },  
 
-     {
-        bars_name:"",
-        rating:"",
-        pricing:"", 
-        hours:"", 
-        reservation:"",
-        review:""
-     },  
+   //   {
+   //      bars_name:"",
+   //      rating:"",
+   //      pricing:"", 
+   //      hours:"", 
+   //      reservation:"",
+   //      review:""
+   //   },  
 
-     {
-        bars_name:"",
-        rating:"",
-        pricing:"", 
-        hours:"", 
-        reservation:"",
-        review:""
-     },  
+   //   {
+   //      bars_name:"",
+   //      rating:"",
+   //      pricing:"", 
+   //      hours:"", 
+   //      reservation:"",
+   //      review:""
+   //   },  
 
-     {
-        bars_name:"",
-        rating:"",
-        pricing:"", 
-        hours:"", 
-        reservation:"",
-        review:""
-     }, 
+   //   {
+   //      bars_name:"",
+   //      rating:"",
+   //      pricing:"", 
+   //      hours:"", 
+   //      reservation:"",
+   //      review:""
+   //   }, 
 
-     {
-        bars_name:"",
-        rating:"",
-        pricing:"", 
-        hours:"", 
-        reservation:"",
-        review:""
-     },  
+   //   {
+   //      bars_name:"",
+   //      rating:"",
+   //      pricing:"", 
+   //      hours:"", 
+   //      reservation:"",
+   //      review:""
+   //   },  
 
-     {
-        bars_name:"",
-        rating:"",
-        pricing:"", 
-        hours:"", 
-        reservation:"",
-        review:""
-     }, 
+   //   {
+   //      bars_name:"",
+   //      rating:"",
+   //      pricing:"", 
+   //      hours:"", 
+   //      reservation:"",
+   //      review:""
+   //   }, 
 
 
 
 
 ]
+
+
+sequelize.sync({force:true}).then(async ()=> {
+   try{
+
+       await Bar.bulkCreate(seed);
+       console.log("seeded")
+   }catch(err){
+       console.log(err)
+   }
+})
