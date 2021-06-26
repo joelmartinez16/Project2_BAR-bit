@@ -9,3 +9,126 @@
     margin: 0;
     padding: 0;
   }
+
+/* nav bar */
+.ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding-block: 27px;
+    margin-right: 20px;
+  }
+
+.logo{
+    font-size: 24px;
+    border-style: solid;
+    padding: 7px;
+    font-family: Belleza,open sans, sans;
+}
+
+.rabbit{
+    height: 18px;
+}
+
+.contact:hover{
+    color:white;
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.about:hover{
+    color:white;
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.sign-btn{
+    background-color: #333333;
+    color: white;
+    border-color: #333333;
+}
+
+.sign-btn:hover {
+    background-color: white;
+    color:black;
+    cursor: pointer;
+}
+
+.border{
+    border-color: black;
+}
+
+
+/* under nav section */
+.infoSection{
+    display: flex;
+    margin-block: 63px;
+}
+
+.glass{
+    height: 200px;
+}
+
+.bigRabbit{
+    height: 200px;
+}
+
+.mainText{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.infoText{
+    color: #606060;
+    font-size: 20px;
+}
+
+.text{
+    text-align:center
+}
+
+
+
+
+/* day html*/
+.dayCards{
+    padding: 40px;
+}
+
+.card{
+   margin-block: 40px;
+}
+
+.row {
+    --bs-gutter-x: -8.5rem;
+}
+
+
+/* footer */
+.footer{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.social{
+    height: 27px;
+}
+
+.social:hover{
+    cursor: pointer;
+}
+
+.social:hover{
+    cursor:pointer;
+}
+
+.smallLogo{
+    height: 40px;
+}
+
+.copyright{
+    font-size: 20px;
+    color: #606060;
+}
