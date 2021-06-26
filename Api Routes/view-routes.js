@@ -1,7 +1,6 @@
 const router = require('express').Router();
-// const { User } = require('../Models');
+const { Bar } = require('../Bar-Models');
 // const withAuth = require('../Utilities/auth');
-
 
 // router.get('/', withAuth, async (req, res) => {
 //   try {
@@ -30,24 +29,37 @@ router.get('/sign-up', (req, res) => {
   res.render('sign-up');
 });
 
-router.get("/", (req, res)=> {
+router.get("/", (req, res) => {
   res.render("homepage");
 })
 
-router.get("/bars", (req, res)=> {
+router.get("/bars", (req, res) => {
   res.render("bars");
 })
 
-router.get("/weekdays", (req, res)=> {
+router.get("/weekdays", (req, res) => {
   res.render("weekdays");
 });
 
-router.get("/weekdays/:day", (req,res)=> {
+router.get("/weekdays/:day", async (req, res) => {
   console.log('day of week', req.params.day);
   //use param for db lookup
-  res.render('bars', {bars: [{name: "monday bar 1"}, {name: "monday bar 2"}]})
+  console.log(req.params.day)
+  const data = await Bar.findAll({
+    where: {
+      day_of_week: req.params.day
+    }
+    
+  });
+
+  const bars = data.map(bar => bar.get({ plain: true }))
+
+  res.render('bars', { bars })
+
 })
 
 
 
 module.exports = router;
+
+

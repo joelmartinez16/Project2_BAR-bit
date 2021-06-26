@@ -10,7 +10,8 @@
 //     );
 
 const Sequelize = require("sequelize");
-const {Model, DataTypes} = Sequelize;
+const { Model, DataTypes } = Sequelize;
+const sequelize = require("../Configuration/connection")
 
 class Bar extends Model {
 
@@ -21,56 +22,61 @@ Bar.init(
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
-            primaryKey: true, 
-         
-        }, 
-        bars_name: { 
-            type : DataTypes.STRING, 
-            allowNull: false, 
-        }, 
+            primaryKey: true,
 
-        rating : { 
-            type : DataTypes.INET, 
-            allowNull: false, 
-        }, 
-
-        pricing: { 
-            type: DataTypes.ENUM, 
-            allowNull: false, 
-        }, 
-
-        hours: { 
-            type: DataTypes.STRING, 
-            allowNull: false, 
-        }, 
-
-        reservation: { 
-            type: DataTypes.STRING, 
-            allowNull: false, 
-        }, 
-
-        reviews: { 
-            type: DataTypes.STRING, 
+        },
+        bars_name: {
+            type: DataTypes.STRING,
             allowNull: false,
-        },  
-        
-        day_of_week:{ 
-            type: DataTypes.STRING, 
+        },
+
+        rating: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: Math.ceil(Math.random() * 5)
+        },
+
+        pricing: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 20
+        },
+
+        hours: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            defaultValue: "all the time"
+        },
+
+        reservation: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            defaultValue: "no need"
+        },
+
+        reviews: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+
+        day_of_week: {
+            type: DataTypes.STRING,
             allowNull: false,
 
         },
-    
-        
-    }, 
-    
-    { sequelize, 
+
+
+    },
+
+    {
+        sequelize,
         freezeTableName: true,
         underscored: true,
         modelName: 'Bars',
 
-      }
+    }
 
-); 
+);
 
 module.exports = Bar;
 

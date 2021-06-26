@@ -1,5 +1,5 @@
-const User = require('./User'); 
+// const User = require('./User'); 
 
-const Bar = require('./Bar');
+const Bar = require('./bars.js');
 
-module.exports = { User, Bar};
+module.exports = {  Bar};
