@@ -13,6 +13,7 @@
     font-size: 24px;
     border-style: solid;
     padding: 7px;
+    font-family: Belleza,open sans, sans;
 }
 
 .rabbit{
@@ -23,6 +24,24 @@
     background-color: #333333;
     color: white;
     border-color: #333333;
+}
+
+.sign-btn:hover {
+    background-color: white;
+    color:black;
+    cursor: pointer;
+}
+
+.contact:hover{
+    color:white;
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.about:hover{
+    color:white;
+    background-color: #333333;
+    cursor: pointer;
 }
 
 .border{
@@ -73,3 +92,24 @@
 .row {
     --bs-gutter-x: -8.5rem;
 }
+
+/*footer*/
+.footer{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.social{
+    height: 27px;
+}
+
+.smallLogo{
+    height: 40px;
+}
+
+.copyright{
+    font-size: 20px;
+    color: #606060;
+}
+
