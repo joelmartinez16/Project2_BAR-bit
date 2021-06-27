@@ -1,5 +1,5 @@
 
-const sequelize = require("./Configuration/connection")
+const sequelize = require("../Configuration/connection.js")
 const { Bar } = require('../Bar-Models');
 
 const BarData = [  
@@ -367,12 +367,14 @@ const BarData = [
 
 
 ]
-sequelize.sync({force:true}).then(async ()=> {
+const Barseed =() => {sequelize.sync({force:true}).then(async ()=> {
        try{
    
-           await Bar.bulkCreate(seed);
+           await Bar.bulkCreate(BarData);
            console.log("seeded")
        }catch(err){
            console.log(err)
        }
-   })
+   })}
+
+   module.exports = Barseed;
