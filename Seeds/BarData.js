@@ -240,121 +240,139 @@ const BarData = [
         rating:"4 stars",
         pricing:"$", 
         hours:" Mon- Sun: 11:00 AM- 10:00 PM", 
-        reservation:"",
-        review:"", 
+        reservation:"Recommended not required",
+        review:"A trendy beautiful restaurant right on the water near the Star of India ship.Vibe is great and customer service is super on point", 
         day_of_week:"Feel good Friday ( Happy Hours)",
      },  
 
-   //   {
-   //      bars_name:"",
-   //      rating:"",
-   //      pricing:"", 
-   //      hours:"", 
-   //      reservation:"",
-   //      review:""
-   //   },  
-   //   {
-   //      bars_name:"",
-   //      rating:"",
-   //      pricing:"", 
-   //      hours:"", 
-   //      reservation:"",
-   //      review:""
-   //   }, 
+     {
+        bars_name:" Level 9 Rooftop Bar",
+        rating:"4 stars",
+        pricing:"$$", 
+        hours:" Sun- Wed: Closed, Thurs- Sat: 5:00 PM- 9:30 PM;", 
+        reservation:" Reservation not required",
+        review:"A trendy beautiful restaurant right on the water near the Star of India ship. Vibe is great and customer service is super on point ", 
+        day_of_week:"Feel good Friday ( Happy Hours)", 
+     },  
+     {
+        bars_name:"Seven Grand",
+        rating:"4.5 stars",
+        pricing:"$$", 
+        hours:" Mon-Sun: 4:00 PM- 2:00 AM", 
+        reservation:"Recommended noot required",
+        review:" this spot isn't all about bells and whistles it's just about having a good cocktail and enjoying the company you're with. The prices are extremely  affordable especially with all the work that goes in to every drink.", 
+        day_of_week:"Feel good Friday ( Happy Hours)", 
+     }, 
      
-   //   {
-   //      bars_name:"",
-   //      rating:"",
-   //      pricing:"", 
-   //      hours:"", 
-   //      reservation:"",
-   //      review:""
-   //   },  
+     {
+        bars_name:"ALTITUDE Sky lounge",
+        rating:"4 stars",
+        pricing:"$$", 
+        hours:"Sunday/Monday: Closed, T-Th: 5pm-12am, Friday/Saturday: 5pm-1am", 
+        reservation:" No reservations, first come first served",
+        review:"Great place to grab some drinks, take in the scenic view, and watch a  baseball game”, “a nice gem with a beautiful view and cool staff in the city", 
+        day_of_week:"Saturday Night Feels ( A night out/ Saturday Nightlife)",
+     },  
 
-   //   {
-   //      bars_name:"",
-   //      rating:"",
-   //      pricing:"", 
-   //      hours:"", 
-   //      reservation:"",
-   //      review:""
-   //   },  
+     {
+        bars_name:" The Nolen",
+        rating:"4 stars",
+        pricing:"$$", 
+        hours:"Mon- Thurs: 5:00 PM- 12:00 AM, Fri & Sat: 5:00 PM- 1:00 AM, Sun: 11:00AM- 2:00 PM/ 5:00 PM-11:00 PM", 
+        reservation:" Reservation Required",
+        review:"The Nolen rooftop bar and lounge is a downtown San Diego destination for local and visiting imbibers alike. Enjoy our modern, yet timeless cocktail menu while taking in all the beauty of America's Finest City", 
+        day_of_week:"Saturday Night Feels ( A night out/ Saturday Nightlife)",
+     },  
 
-   //   {
-   //      bars_name:"",
-   //      rating:"",
-   //      pricing:"", 
-   //      hours:"", 
-   //      reservation:"",
-   //      review:""
-   //   },  
+     {
+        bars_name:"Top of the Hyatt",
+        rating:"4 stars",
+        pricing:"$$$", 
+        hours:"Fri & Sat: 4:00 PM- 10:00 PM", 
+        reservation:"No reservations, first come first served",
+        review:"Top of the Hyatt is a 40th floor sky lounge with panoramic views of San Diego and the Pacific Ocean featuring specialty cocktails, light fare and dessert", 
+        day_of_week:"Saturday Night Feels ( A night out/ Saturday Nightlife)",
+     },  
 
-   //   {
-   //      bars_name:"",
-   //      rating:"",
-   //      pricing:"", 
-   //      hours:"", 
-   //      reservation:"",
-   //      review:""
-   //   },  
+     {
+        bars_name:". Polite Provisions",
+        rating:" 4.5 stars;",
+        pricing:"$$", 
+        hours:"Mon- Thurs: 4:00 PM- 2:00 AM,  Fri-Sun: 3:00 PM- 2:00 AM", 
+        reservation:" No reservations, first come first served",
+        review:"The bar has a cool decor and lots of seating with barriers in between areas with lots of fresh air blowing through. huge drink selection with several mixed   drinks on tap",
+        day_of_week:"Saturday Night Feels ( A night out/ Saturday Nightlife)"
+     },  
 
-   //   {
-   //      bars_name:"",
-   //      rating:"",
-   //      pricing:"", 
-   //      hours:"", 
-   //      reservation:"",
-   //      review:""
-   //   },  
+     {
+        bars_name:". Harbor & Sky Rooftop Bar and Lounge",
+        rating:"3.5 stars",
+        pricing:"$", 
+        hours:"Mon & Tues: Closed, Wed- Fri: 5:00 PM- 10:00 PM, Sat & Sun: 11:00 AM-10:00 PM", 
+        reservation:" No reservations, first come first served",
+        review:"Harbor & Sky is San Diego's newest rooftop lounge. With some of the city's   most amazing views and plenty of space to relax and unwind, it is a must for  visitors and locals alike. With sweeping views of San Diego Bay and sitting  above Lane Field, it's pure San Diego chill", 
+        day_of_week:"Saturday Night Feels ( A night out/ Saturday Nightlife)",
+     },  
 
-   //   {
-   //      bars_name:"",
-   //      rating:"",
-   //      pricing:"", 
-   //      hours:"", 
-   //      reservation:"",
-   //      review:""
-   //   },  
+     {
+        bars_name:"Breakfast Bitch- San Diego",
+        rating:"4 stars",
+        pricing:"", 
+        hours:" Mon- Thurs: 8:00 AM- 1:00 PM, Fri: 8:00 AM-2:00 PM, Sat- Sun: 8:00 AM-3:00 PM", 
+        reservation:"Not required",
+        review:" Combining comfort food, good music, and table games with a hip and fun vibe offering a one of a kind experience", 
+        day_of_week:"Self Care Sunday (top brunch locations)",
+     },  
 
-   //   {
-   //      bars_name:"",
-   //      rating:"",
-   //      pricing:"", 
-   //      hours:"", 
-   //      reservation:"",
-   //      review:""
-   //   }, 
+     {
+        bars_name:"Morning Glory",
+        rating:"4 stars",
+        pricing:"$$", 
+        hours:"Mon- Fri: 8:00 AM- 3:00 PM, Sat & Sun: 8:00 AM- 4:00 PM", 
+        reservation:"First come first served",
+        review:"“What a stunning beautiful place to experience a really nice atmosphere, along  side QUALITY SERVICE, Beautiful Faces, DELICIOUS FOOD + Drinks + great Music, almost makes you feel like your in a night club with royal service", 
+        day_of_week:"Self Care Sunday (top brunch locations)",
+     }, 
 
-   //   {
-   //      bars_name:"",
-   //      rating:"",
-   //      pricing:"", 
-   //      hours:"", 
-   //      reservation:"",
-   //      review:""
-   //   },  
+     {
+        bars_name:"Crushed",
+        rating:"4.5 stars",
+        pricing:"$$", 
+        hours:"Mon-Thurs: 10:00 AM- 8:00 PM, Fri- Sun: 10:00 AM-9:00 PM", 
+        reservation:"First come first served",
+        review:"Crushed brings an awesome Brunch and Dinner to Pacific Beach! Where you   can enjoy a variety of craft cocktails, local beer, unique mimosas, and great wine in a neighborhood atmosphere", 
+        day_of_week:"Self Care Sunday (top brunch locations)",
+     },  
 
-   //   {
-   //      bars_name:"",
-   //      rating:"",
-   //      pricing:"", 
-   //      hours:"", 
-   //      reservation:"",
-   //      review:""
-   //   }, 
+     {
+        bars_name:" Snooze, an A.M. Eatery",
+        rating:"4.5 stars",
+        pricing:"$$", 
+        hours:" Mon- Fri: 6:30 AM- 2:30 PM,  Sat & Sun: 6:30 AM- 4:00 PM", 
+        reservation:" First come first served",
+        review:"Stop by for delicious pancakes, french toast, benedicts, breakfast burritos,  oatmeal, breakfast sandwiches, bacon & more. From paleo to vegetarian &  vegan or dairy free & gluten free friendly, we'll happily accommodate food allergies & diets", 
+        day_of_week:"Self Care Sunday (top brunch locations)",
+     }, 
+     {
+        bars_name:" Breakfast & Bubbles",
+        rating:"3.5 stars",
+        pricing:"$$", 
+        hours:" Mon: Closed, Tues- Sun: 8:30 AM- 3:00 PM", 
+        reservation:"First come first served",
+        review:"“Absolutely exceptional service! The food was to die for", 
+        day_of_week:"Self Care Sunday (top brunch locations)",
+     },   
 
 
 
 
 ]
-
-
 sequelize.sync({force:true}).then(async ()=> {
-   try{
-
-       await Bar.bulkCreate(seed);
-       console.log("seeded")
-   }catch(err){
-       console.log(err)
-   }
-})
+       try{
+   
+           await Bar.bulkCreate(seed);
+           console.log("seeded")
+       }catch(err){
+           console.log(err)
+       }
+   })
