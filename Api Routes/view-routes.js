@@ -52,14 +52,18 @@ router.get("/weekdays/:day", async (req, res) => {
     
   });
 
+
+ 
+  
+
   const bars = data.map(bar => bar.get({ plain: true }))
 
   res.render('bars', { bars })
+
+
 
 })
 
 
 
 module.exports = router;
-
-

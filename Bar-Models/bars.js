@@ -12,7 +12,7 @@
 const Sequelize = require("sequelize");
 const { Model, DataTypes } = Sequelize;
 const sequelize = require("../Configuration/connection")
-
+const data= require("./index")
 
 class Bar extends Model {
 

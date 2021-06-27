@@ -370,7 +370,7 @@ const BarData = [
 sequelize.sync({force:true}).then(async ()=> {
        try{
    
-           await Bar.bulkCreate(seed);
+           await BarData.bulkCreate(BarData);
            console.log("seeded")
        }catch(err){
            console.log(err)
