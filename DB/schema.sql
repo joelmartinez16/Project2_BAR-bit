@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS barbit_db;
+CREATE DATABASE barbit_db;
