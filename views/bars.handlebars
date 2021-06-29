@@ -1,10 +1,16 @@
-<h1>Drinks</h1>
+<main style="display:flex;flex-direction: row; justify-content: space-evenly">
 
-{{!-- look up handlebars to link the data from the backend --}}
+<div style="width: 55%" id="map"></div>
 
-<h1>Google Map</h1>
-<div id="map"></div>
+<div style="width: 40%;box-shadow:0 1rem 3rem rgba(0,0,0,.175); border-radius: 20px;" class="bar-cards">
 
+{{#each bars}}
+{{bars_name}},{{review}}
+{{/each}}
+
+
+</div>
+</main>
 
 <script src="/javascript/script.js"></script>
 
