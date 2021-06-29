@@ -33,13 +33,18 @@ router.get("/", (req, res) => {
   res.render("homepage");
 })
 
-router.get("/bars", (req, res) => {
-  res.render("bars");
+
+router.get("/bars", async(req, res) => {
+  const data = await Bar.findAll({});
+  const bars = data.map(bar => bar.get({ plain: true }))
+  res.render("bars",{bars});
 })
 
 router.get("/weekdays", (req, res) => {
   res.render("weekdays");
-});
+}); 
+
+
 
 router.get("/weekdays/:day", async (req, res) => {
   console.log('day of week', req.params.day);
