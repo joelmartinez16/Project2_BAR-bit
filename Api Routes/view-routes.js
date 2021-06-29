@@ -57,7 +57,9 @@ router.get("/weekdays/:day", async (req, res) => {
     
   });
 
-
+// router.get("weekdays", (req,res) => {
+//   res.render("weekdays");
+// })
  
   
 
