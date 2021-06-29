@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Bar } = require('../Bar-Models');
+const { Bars } = require('../Models/Bar-Models/bars.js');
 // const withAuth = require('../Utilities/auth');
 
 // router.get('/', withAuth, async (req, res) => {
@@ -35,8 +35,8 @@ router.get("/", (req, res) => {
 
 
 router.get("/bars", async(req, res) => {
-  const data = await Bar.findAll({});
-  const bars = data.map(bar => bar.get({ plain: true }))
+  const data = await Bars.findAll({});
+  const bars = data.map(Bars => Bars.get({ plain: true }))
   res.render("bars",{bars});
 })
 
@@ -50,7 +50,7 @@ router.get("/weekdays/:day", async (req, res) => {
   console.log('day of week', req.params.day);
   //use param for db lookup
   console.log(req.params.day)
-  const data = await Bar.findAll({
+  const data = await Bars.findAll({
     where: {
       day_of_week: req.params.day
     }

@@ -11,8 +11,8 @@
 
 const Sequelize = require("sequelize");
 const { Model, DataTypes } = Sequelize;
-const sequelize = require("../../Configuration/connection")
-//const data= require("./index.js")
+const sequelize = require("../Configuration")
+//const data= require("./index")
 
 class Bars extends Model {
 
@@ -32,15 +32,15 @@ Bars.init(
         },
 
         rating: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
-            //defaultValue: Math.ceil(Math.random() * 5)
+            defaultValue: Math.ceil(Math.random() * 5)
         },
 
         pricing: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
-            //defaultValue: 20
+            defaultValue: 20
         },
 
         hours: {
@@ -58,7 +58,6 @@ Bars.init(
         reviews: {
             type: DataTypes.STRING,
             allowNull: false,
-            defaultValue: "N/A"
         },
 
         day_of_week: {
@@ -80,5 +79,5 @@ Bars.init(
 
 );
 
-module.exports = {Bars};
+module.exports = Bars;
 
