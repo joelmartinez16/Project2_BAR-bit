@@ -54,7 +54,9 @@ router.get("/weekdays/:day", async (req, res) => {
   console.log(req.params.day)
   const data = await Bars.findAll({
     where: {
-      day_of_week: req.params.day
+      day_of_week: req.params.day  
+      
+
     }
     
   });
