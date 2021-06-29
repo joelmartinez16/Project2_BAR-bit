@@ -2,14 +2,20 @@
 
 <div style="width: 55%" id="map"></div>
 
-<div style="width: 40%;box-shadow:0 1rem 3rem rgba(0,0,0,.175); border-radius: 20px;" class="bar-cards">
+<div style="width: 40%;box-shadow:0 1rem 3rem rgba(0,0,0,.175); border-radius: 20px; display:flex;flex-direction:column;" class="bar-cards">
 
 {{#each bars}}
-{{bars_name}},{{review}}
-{{/each}}
+<div  style  ="padding:0 0.5em;"> 
+
+{{bars_name}},{{days}},{{pricing}}
+
 
 
 </div>
+{{/each}}
+
+</div> 
+
 </main>
 
 <script src="/javascript/script.js"></script>
