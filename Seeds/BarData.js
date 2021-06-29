@@ -378,3 +378,5 @@ const Barseed =() => {sequelize.sync({force:true}).then(async ()=> {
    })}
 
    module.exports = Barseed;
+
+   seedDatabase();
