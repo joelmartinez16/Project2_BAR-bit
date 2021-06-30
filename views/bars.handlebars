@@ -1,23 +1,28 @@
+
 <main style="display:flex;flex-direction: row; justify-content: space-evenly">
 
 <div style="width: 55%" id="map"></div>
 
 <div style="width: 40%;box-shadow:0 1rem 3rem rgba(0,0,0,.175); border-radius: 20px; display:flex;flex-direction:column;" class="bar-cards">
 
-<h1 class=daysOfWeek>{{day_of_week}}</h1>
+
 
 {{#each bars}}
+
 <div  style  ="padding:0 0.5em;"> 
 
 {{!-- {{bars_name}},{{day_of_week}},{{pricing}} --}}
 
 <div class="card shadow" style="width: 80%;margin:auto">
   <div class="card-body">
+    <p class="daysOfWeek">{{day_of_week}}</p>
     <h5 class="card-title">{{bars_name}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{rating}} {{pricing}}</h6>
     <p class="card-text">{{hours}}</p>
     <p class="card-text">{{reservation}}</p>
     <p class="card-text">{{review}}</p>
+   
+
   </div>
 </div>
 
