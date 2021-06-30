@@ -2,7 +2,13 @@ const router = require('express').Router();
 const { Bars } = require('../Models/Bar-Models/bars.js');
 const dayMap = {
   "monday": "Moody Monday",
-  "wednesday": 'Humpday Wednesday'
+  "tuesday": 'Treat yo’self Tuesday (fancier stuff)',
+  "wednesday": 'Humpday Wednesday',
+  "thursday":'Thirsty Thursdays (dive bars)',
+  "friday": 'Feel good Friday ( Happy Hours)',
+  "saturday": 'Saturday Night Feels ( A night out/ Saturday Nightlife)',
+  "sunday" : 'Self Care Sunday (top brunch locations)'
+  
 }
 // const withAuth = require('../Utilities/auth');
 
