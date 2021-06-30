@@ -1,5 +1,9 @@
 const router = require('express').Router();
 const { Bars } = require('../Models/Bar-Models/bars.js');
+const dayMap = {
+  "monday": "Moody Monday",
+  "wednesday": 'Humpday Wednesday'
+}
 // const withAuth = require('../Utilities/auth');
 
 // router.get('/', withAuth, async (req, res) => {
@@ -20,6 +24,14 @@ const { Bars } = require('../Models/Bar-Models/bars.js');
 //   }
 // });
 
+router.get('/sign-up', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
+});
 
 router.get("/", (req, res) => {
   res.render("homepage");
@@ -38,7 +50,7 @@ router.get('/sign-up', (req, res) => {
     return;
   }
 
-  res.render('sign-up');
+  res.render('login');
 });
 
 
@@ -54,12 +66,13 @@ router.get("/weekdays/:day", async (req, res) => {
   console.log(req.params.day)
   const data = await Bars.findAll({
     where: {
-      day_of_week: req.params.day  
+      day_of_week: dayMap[req.params.day] 
       
 
     }
     
   });
+<<<<<<< HEAD
 })
   router.get("/weekdays/:name", async (req, res) => {
     console.log('sucess', req.params.name);
@@ -71,19 +84,40 @@ router.get("/weekdays/:day", async (req, res) => {
         
 
       }
+=======
+  
+  const bars = data.map(bar => bar.get({ plain: true }))
+    console.log(bars)
+  res.render('bars', { bars })
+});
+
+// const bars = data.map(bar => bar.get({ plain: true }))
+
+//   res.render('bars', { bars })
+
+  // router.get("/bars_name", async (req, res) => {
+  //   console.log('sucess', req.params.name);
+  //   //use param for db lookup
+  //   // console.log(req.params.day)
+  //   const data = await Bars.findAll({
+  //     where: {
+  //       bars_name: req.params.name,
+        
+  //     }
+>>>>>>> 448f0b787cc9d1021b7a8307fbfb1a83807bad97
       
-    }
-  );
+  //   }
+  // );
  
   
 
-  const bars = data.map(bar => bar.get({ plain: true }))
+  //const bars = data.map(bar => bar.get({ plain: true }))
 
-  res.render('bars', { bars })
+  //res.render('bars', { //bars })
 
 
 
-})
+// });
 
 
 
