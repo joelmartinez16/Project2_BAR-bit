@@ -61,18 +61,14 @@ router.get("/weekdays/:day", async (req, res) => {
     
   });
 })
-  router.get("/weekdays/:name, rating, pricing, hours, reservation, review", async (req, res) => {
+  router.get("/weekdays/:name", async (req, res) => {
     console.log('sucess', req.params.name);
     //use param for db lookup
     // console.log(req.params.day)
     const data = await Bars.findAll({
       where: {
         bars_name: req.params.name,
-        rating: req.params.rating,
-        pricing: req.params.pricing,
-        hours: req.params.hours,
-        reservation: req.params.reservation,
-        review: req.params.review
+        
 
       }
       
