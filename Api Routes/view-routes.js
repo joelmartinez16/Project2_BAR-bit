@@ -1,5 +1,9 @@
 const router = require('express').Router();
 const { Bars } = require('../Models/Bar-Models/bars.js');
+const dayMap = {
+  "monday": "Moody Monday",
+  "wednesday": 'Humpday Wednesday'
+}
 // const withAuth = require('../Utilities/auth');
 
 // router.get('/', withAuth, async (req, res) => {
@@ -38,7 +42,7 @@ router.get('/sign-up', (req, res) => {
     return;
   }
 
-  res.render('sign-up');
+  res.render('login');
 });
 
 
@@ -54,7 +58,7 @@ router.get("/weekdays/:day", async (req, res) => {
   console.log(req.params.day)
   const data = await Bars.findAll({
     where: {
-      day_of_week: req.params.day  
+      day_of_week: dayMap[req.params.day] 
       
 
     }
@@ -62,7 +66,7 @@ router.get("/weekdays/:day", async (req, res) => {
   });
   
   const bars = data.map(bar => bar.get({ plain: true }))
-
+    console.log(bars)
   res.render('bars', { bars })
 });
 
