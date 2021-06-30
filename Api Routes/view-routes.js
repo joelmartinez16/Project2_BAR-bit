@@ -20,7 +20,6 @@ const { Bars } = require('../Models/Bar-Models/bars.js');
 //   }
 // });
 
-<<<<<<< HEAD
 router.get('/sign-up', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
@@ -29,8 +28,6 @@ router.get('/sign-up', (req, res) => {
 
   res.render('login');
 });
-=======
->>>>>>> a60bae0490b27cf17bc9ac3061d8ef823b09bd1f
 
 router.get("/", (req, res) => {
   res.render("homepage");
