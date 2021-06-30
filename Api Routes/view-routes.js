@@ -24,6 +24,14 @@ const dayMap = {
 //   }
 // });
 
+router.get('/sign-up', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
+});
 
 router.get("/", (req, res) => {
   res.render("homepage");
