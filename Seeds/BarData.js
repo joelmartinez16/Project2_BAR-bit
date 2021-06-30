@@ -363,6 +363,7 @@ const BarData = [
         day_of_week:"Self Care Sunday (top brunch locations)",
      },  
 ]
+
 const Barseed = () => {
    sequelize.sync({force:true}).then(async ()=> {
        try{
@@ -374,5 +375,7 @@ const Barseed = () => {
        }
    })
 }
+
+module.exports = Barseed
 
 
