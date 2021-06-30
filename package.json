@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seeds": "node Seeds/index.js"
+    "seeds": "node Seeds/index.js",
+    "heroku-postbuild": "npm run seeds"
   },
   "repository": {
     "type": "git",
