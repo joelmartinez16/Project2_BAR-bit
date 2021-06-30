@@ -100,6 +100,10 @@
    margin-block: 40px;
 }
 
+.card:hover{
+    background-color: #DCDCDC;
+}
+
 .row {
     --bs-gutter-x: -8.5rem;
 }

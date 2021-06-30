@@ -57,10 +57,12 @@
 
 .glass{
     height: 200px;
+    margin: 20px;
 }
 
 .bigRabbit{
     height: 200px;
+    margin: 20px;
 }
 
 .mainText{
@@ -87,6 +89,10 @@
 
 .card{
    margin-block: 40px;
+}
+
+.card:hover{
+    background-color: #DCDCDC;
 }
 
 .row {
