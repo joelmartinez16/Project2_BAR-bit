@@ -8,13 +8,16 @@
 <div  style  ="padding:0 0.5em;"> 
 
 {{!-- {{bars_name}},{{day_of_week}},{{pricing}} --}}
+<h1>{{day_of_week}}</h1>
+
 <div class="card shadow" style="width: 80%;margin:auto">
   <div class="card-body">
     <h5 class="card-title">{{bars_name}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{rating}}/h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{rating}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{pricing}}</h6>
+    <p class="card-text">{{hours}}</p>
+    <p class="card-text">{{reservation}}</p>
     <p class="card-text">{{review}}</p>
-    <a href="#" class="card-link">{{hours}}</a>
-    <a href="#" class="card-link">{{reservation}}</a>
   </div>
 </div>
 
