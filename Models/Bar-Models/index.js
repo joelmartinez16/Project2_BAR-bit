@@ -1,6 +1,7 @@
 // const User = require('./User'); 
 
-const Bar = require('./bars.js'); 
+const Bars = require('./bars.js'); 
+const Session = require('./session.js'); 
 
 
-module.exports = {  Bar};
+module.exports = {Bars, Session};

@@ -1,22 +1,22 @@
 
-const sequelize = require("../Configuration/connection.js")
-const { Bar } = require('../Bar-Models');
+const sequelize = require("../Configuration/connection")
+const  {Bars} = require("../Models/Bar-Models/bars.js");
 
 const BarData = [  
     
     { 
         bars_name:"C Level", 
-        rating: '4.5 stars',
-        pricing: '$$',
-        hours: 'Sun- Thurs: 11:30 AM- 9:00 PM, Fri & Sat: 11:30 AM- 9:30 PM;', 
-        reservation: 'Takes Reservations',
-        review: ' Great place for a celebration for any occasion. Beautiful view, great service, and good food.',
-        day_of_week: 'Moody Monday',
+        rating: "4.5 stars",
+        pricing: "$$",
+        hours: "Sun- Thurs: 11:30 AM- 9:00 PM, Fri & Sat: 11:30 AM- 9:30 PM;", 
+        reservation: "Takes Reservations",
+        review: "Great place for a celebration for any occasion. Beautiful view, great service, and good food.",
+        day_of_week: "Moody Monday",
      }, 
 
      { 
          bars_name:" Belgian Beer & Waffle",
-         rating:" 4.5 stars",
+         rating:"4.5 stars",
          pricing:"$$", 
          hours:" Mon- Sun: 9:00 AM- 3:00 PM;", 
          reservation:"No reservations, first come first served",
@@ -361,22 +361,18 @@ const BarData = [
         reservation:"First come first served",
         review:"“Absolutely exceptional service! The food was to die for", 
         day_of_week:"Self Care Sunday (top brunch locations)",
-     },   
-
-
-
-
+     },  
 ]
-const Barseed =() => {sequelize.sync({force:true}).then(async ()=> {
+const Barseed = () => {
+   sequelize.sync({force:true}).then(async ()=> {
        try{
-   
-           await Bar.bulkCreate(BarData);
+           console.log("No longer undefined",Bars);
+           await Bars.bulkCreate(BarData);
            console.log("seeded")
        }catch(err){
            console.log(err)
        }
-   })}
+   })
+}
 
-   module.exports = Barseed;
 
-   seedDatabase();

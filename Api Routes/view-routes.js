@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Bar } = require('../Bar-Models');
+const { Bars } = require('../Models/Bar-Models/bars.js');
 // const withAuth = require('../Utilities/auth');
 
 // router.get('/', withAuth, async (req, res) => {
@@ -20,6 +20,18 @@ const { Bar } = require('../Bar-Models');
 //   }
 // });
 
+
+router.get("/", (req, res) => {
+  res.render("homepage");
+})
+
+
+router.get("/bars", async(req, res) => {
+  const data = await Bars.findAll({});
+  const bars = data.map(Bars => Bars.get({ plain: true }))
+  res.render("bars",{bars});
+})
+
 router.get('/sign-up', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
@@ -29,16 +41,6 @@ router.get('/sign-up', (req, res) => {
   res.render('sign-up');
 });
 
-router.get("/", (req, res) => {
-  res.render("homepage");
-})
-
-
-router.get("/bars", async(req, res) => {
-  const data = await Bar.findAll({});
-  const bars = data.map(bar => bar.get({ plain: true }))
-  res.render("bars",{bars});
-})
 
 router.get("/weekdays", (req, res) => {
   res.render("weekdays");
@@ -50,21 +52,43 @@ router.get("/weekdays/:day", async (req, res) => {
   console.log('day of week', req.params.day);
   //use param for db lookup
   console.log(req.params.day)
-  const data = await Bar.findAll({
+  const data = await Bars.findAll({
     where: {
-      day_of_week: req.params.day
+      day_of_week: req.params.day  
+      
+
     }
     
   });
+})
+  router.get("/weekdays/:name, rating, pricing, hours, reservation, review", async (req, res) => {
+    console.log('sucess', req.params.name);
+    //use param for db lookup
+    // console.log(req.params.day)
+    const data = await Bars.findAll({
+      where: {
+        bars_name: req.params.name,
+        rating: req.params.rating,
+        pricing: req.params.pricing,
+        hours: req.params.hours,
+        reservation: req.params.reservation,
+        review: req.params.review
+
+      }
+      
+    }
+  );
+ 
+  
 
   const bars = data.map(bar => bar.get({ plain: true }))
 
   res.render('bars', { bars })
+
+
 
 })
 
 
 
 module.exports = router;
-
-
