@@ -78,19 +78,6 @@ router.get("/weekdays/:day", async (req, res) => {
     }
     
   });
-<<<<<<< HEAD
-})
-  router.get("/weekdays/:name", async (req, res) => {
-    console.log('sucess', req.params.name);
-    //use param for db lookup
-    // console.log(req.params.day)
-    const data = await Bars.findAll({
-      where: {
-        bars_name: req.params.name,
-        
-
-      }
-=======
   
   const bars = data.map(bar => bar.get({ plain: true }))
     console.log(bars)
@@ -110,7 +97,6 @@ router.get("/weekdays/:day", async (req, res) => {
   //       bars_name: req.params.name,
         
   //     }
->>>>>>> 448f0b787cc9d1021b7a8307fbfb1a83807bad97
       
   //   }
   // );
